@@ -10,6 +10,13 @@ QuestionType = Literal[
 ]
 
 
+EvidenceSource = Literal[
+    "visual",
+    "text",
+    "action",
+]
+
+
 class EpisodeInput(BaseModel):
     sample_id: str
     episode_id: str
@@ -30,11 +37,7 @@ class EpisodeInput(BaseModel):
 class EvidenceItem(BaseModel):
     evidence_id: str
 
-    source: Literal[
-        "visual",
-        "text",
-        "action",
-    ]
+    source: EvidenceSource
 
     content: str
 
@@ -46,6 +49,38 @@ class EvidenceItem(BaseModel):
 class EpisodeEvidence(BaseModel):
     episode_id: str
     evidence: List[EvidenceItem]
+
+
+class RetrievedEvidenceItem(BaseModel):
+    evidence_id: str
+
+    source: EvidenceSource
+
+    content: str
+
+    timestamp: Optional[float] = None
+    frame_path: Optional[str] = None
+
+    retrieval_score: float
+
+    rank: int
+
+
+class RetrievalResult(BaseModel):
+    sample_id: str
+    episode_id: str
+
+    question_type: QuestionType
+
+    question: str
+
+    top_k: int
+
+    modality_balanced: bool
+
+    evidence: List[
+        RetrievedEvidenceItem
+    ]
 
 
 class ReasoningOutput(BaseModel):
