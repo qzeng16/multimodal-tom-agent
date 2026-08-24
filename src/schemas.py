@@ -83,6 +83,25 @@ class RetrievalResult(BaseModel):
     ]
 
 
+class ReasoningResult(BaseModel):
+    sample_id: str
+    episode_id: str
+
+    question_type: QuestionType
+
+    prediction: Optional[str] = None
+
+    used_evidence_ids: List[str] = Field(
+        default_factory=list
+    )
+
+    reasoning_summary: str
+
+    parse_ok: bool
+
+    raw_output: str
+
+
 class ReasoningOutput(BaseModel):
     sample_id: str
 
