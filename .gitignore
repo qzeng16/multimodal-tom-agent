@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+
+.venv/
+venv/
+
+.env
+
+data/raw/
+outputs/
+
+.DS_Store
+# Generated benchmark artifacts
+data/processed/frames/
+data/processed/frame_manifest.json
+data/processed/benchmark.jsonl

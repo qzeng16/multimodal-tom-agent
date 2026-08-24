@@ -1,0 +1,23 @@
+{
+  "episode_id": "sample_001",
+  "video_path": null,
+  "dialogue": [
+    {
+      "speaker": "Alice",
+      "text": "I left the keys on the kitchen table.",
+      "timestamp": 2.1
+    },
+    {
+      "speaker": "Bob",
+      "text": "Okay, I'll get them later.",
+      "timestamp": 4.8
+    }
+  ],
+  "question": "Where does Bob believe the keys are?",
+  "question_type": "belief",
+  "choices": [
+    "Kitchen table",
+    "Bedroom",
+    "Living room"
+  ]
+}
