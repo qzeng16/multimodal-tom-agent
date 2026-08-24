@@ -4,4 +4,7 @@ opencv-python>=4.10
 torch>=2.2
 transformers>=4.46,<5.0
 pillow>=10.0
-sentence-transformers==2.7.0
+sentence-transformers==2.7.0  
+fastapi>=0.115
+uvicorn>=0.30
+pytest>=8.0
