@@ -18,3 +18,5 @@ data/processed/evidence.jsonl
 data/processed/retrieval.jsonl
 data/processed/reasoning.jsonl
 data/processed/verification.jsonl
+data/processed/evaluation_summary.json
+data/processed/error_analysis.jsonl
