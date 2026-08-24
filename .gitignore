@@ -14,3 +14,4 @@ outputs/
 data/processed/frames/
 data/processed/frame_manifest.json
 data/processed/benchmark.jsonl
+data/processed/evidence.jsonl

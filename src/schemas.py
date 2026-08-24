@@ -1,4 +1,5 @@
 from typing import List, Literal, Optional
+
 from pydantic import BaseModel, Field
 
 
@@ -27,6 +28,8 @@ class EpisodeInput(BaseModel):
 
 
 class EvidenceItem(BaseModel):
+    evidence_id: str
+
     source: Literal[
         "visual",
         "text",
@@ -36,8 +39,13 @@ class EvidenceItem(BaseModel):
     content: str
 
     timestamp: Optional[float] = None
-
+    frame_path: Optional[str] = None
     score: Optional[float] = None
+
+
+class EpisodeEvidence(BaseModel):
+    episode_id: str
+    evidence: List[EvidenceItem]
 
 
 class ReasoningOutput(BaseModel):
