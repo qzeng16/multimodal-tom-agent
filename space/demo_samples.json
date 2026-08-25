@@ -1,0 +1,1098 @@
+[
+  {
+    "sample_id": "4005_1",
+    "sample": {
+      "sample_id": "4005_1",
+      "episode_id": "4005",
+      "question_id": "1",
+      "context_text": "Jessica walked into the kitchen while Michael stayed silent. Jessica then moved to the living room and asked, \"Do you have any idea where the remote control might be?\" Michael, who had just walked into the kitchen, replied, \"I found the remote control inside the cabinet in the living room.\" Jessica walked to the cabinet, opened it, grabbed the remote control, and closed the cabinet. She then walked to the sofa and placed the remote control on it.\n\nMeanwhile, Michael walked to the fridge, opened it, grabbed the milk, and closed the fridge. He then opened the microwave and placed the milk inside before closing it.\n\nJessica and Michael completed their tasks without further communication.",
+      "question": "Given the above interaction, if Michael has been trying to help Jessica achieve her goal, which of the following statements is MOST likely true?\nA) When giving information, Michael believed that there was a book inside the cabinet in the living room\nB) When giving information, Michael believed that there was a remote control inside the cabinet in the living room\nC) When giving information, Michael believed that there was a milk inside the cabinet in the living room",
+      "question_type": "belief",
+      "choices": [
+        "A) When giving information, Michael believed that there was a book inside the cabinet in the living room",
+        "B) When giving information, Michael believed that there was a remote control inside the cabinet in the living room",
+        "C) When giving information, Michael believed that there was a milk inside the cabinet in the living room"
+      ],
+      "gold_answer": "B",
+      "gold_answer_text": "B) When giving information, Michael believed that there was a remote control inside the cabinet in the living room"
+    },
+    "retrieval": {
+      "sample_id": "4005_1",
+      "episode_id": "4005",
+      "question_type": "belief",
+      "question": "Given the above interaction, if Michael has been trying to help Jessica achieve her goal, which of the following statements is MOST likely true?\nA) When giving information, Michael believed that there was a book inside the cabinet in the living room\nB) When giving information, Michael believed that there was a remote control inside the cabinet in the living room\nC) When giving information, Michael believed that there was a milk inside the cabinet in the living room",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4005_text_01",
+          "source": "text",
+          "content": "Jessica then moved to the living room and asked, \"Do you have any idea where the remote control might be?\" Michael, who had just walked into the kitchen, replied, \"I found the remote control inside the cabinet in the living room.\" Jessica walked to the cabinet, opened it, grabbed the remote control, and closed the cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.6836552619934082,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4005_text_00",
+          "source": "text",
+          "content": "Jessica walked into the kitchen while Michael stayed silent.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5058356523513794,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4005_text_05",
+          "source": "text",
+          "content": "Jessica and Michael completed their tasks without further communication.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.4999040365219116,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4005_text_03",
+          "source": "text",
+          "content": "Meanwhile, Michael walked to the fridge, opened it, grabbed the milk, and closed the fridge.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.4363381266593933,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4005_text_04",
+          "source": "text",
+          "content": "He then opened the microwave and placed the milk inside before closing it.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3262116014957428,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4005_visual_02",
+          "source": "visual",
+          "content": "a room with a couch, a table and a television",
+          "timestamp": 9.95,
+          "frame_path": "data/processed/frames/4005/frame_02.jpg",
+          "retrieval_score": 0.26103317737579346,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4005_1",
+      "episode_id": "4005",
+      "question_type": "belief",
+      "prediction": "B",
+      "used_evidence_ids": [
+        "4005_text_01",
+        "4005_text_05"
+      ],
+      "reasoning_summary": "The evidence provided indicates that after Michael found the remote control inside the cabinet in the living room, Jessica asked him for more information. This suggests that Michael believed she would want to know where the remote control was located, leading him to give her this specific piece of information. The other options do not align with the sequence of events described in the text.",
+      "parse_ok": true,
+      "raw_output": "ANSWER: Michael believed that there was a remote control inside the cabinet in the living room when he gave Jessica information about finding the remote control inside the cabinet in the living room.\nEVIDENCE: 4005_text_01, 4005_text_05\nREASONING: The evidence provided indicates that after Michael found the remote control inside the cabinet in the living room, Jessica asked him for more information. This suggests that Michael believed she would want to know where the remote control was located, leading him to give her this specific piece of information. The other options do not align with the sequence of events described in the text."
+    },
+    "verification": {
+      "sample_id": "4005_1",
+      "episode_id": "4005",
+      "prediction": "B",
+      "confidence": 0.835983896609183,
+      "mapping_score": 0.8660820722579956,
+      "selected_support": 0.6572476625442505,
+      "alternative_support": 0.6238722801208496,
+      "support_margin": 0.03337538242340088,
+      "evidence_score": 0.5917796492576599,
+      "verification_status": "supported",
+      "abstained": false,
+      "used_evidence_ids": [
+        "4005_text_01",
+        "4005_text_05"
+      ]
+    }
+  },
+  {
+    "sample_id": "4005_2",
+    "sample": {
+      "sample_id": "4005_2",
+      "episode_id": "4005",
+      "question_id": "2",
+      "context_text": "Jessica walked into the kitchen while Michael stayed silent. Jessica then moved to the living room and asked, \"Do you have any idea where the remote control might be?\" Michael, who had just walked into the kitchen, replied, \"I found the remote control inside the cabinet in the living room.\" Jessica walked to the cabinet, opened it, grabbed the remote control, and closed the cabinet. She then walked to the sofa and placed the remote control on it.\n\nMeanwhile, Michael walked to the fridge, opened it, grabbed the milk, and closed the fridge. He then opened the microwave and placed the milk inside before closing it.\n\nJessica and Michael completed their tasks without further communication.",
+      "question": "Given the above interaction, if Michael has been trying to hinder Jessica from achieving her goal, which of the following statements is LEAST likely true?\nA) When giving information, Michael believed that there was a remote control inside the cabinet in the living room\nB) When giving information, Michael believed that there was a milk inside the cabinet in the living room\nC) When giving information, Michael believed that there was a book inside the cabinet in the living room",
+      "question_type": "belief",
+      "choices": [
+        "A) When giving information, Michael believed that there was a remote control inside the cabinet in the living room",
+        "B) When giving information, Michael believed that there was a milk inside the cabinet in the living room",
+        "C) When giving information, Michael believed that there was a book inside the cabinet in the living room"
+      ],
+      "gold_answer": "A",
+      "gold_answer_text": "A) When giving information, Michael believed that there was a remote control inside the cabinet in the living room"
+    },
+    "retrieval": {
+      "sample_id": "4005_2",
+      "episode_id": "4005",
+      "question_type": "belief",
+      "question": "Given the above interaction, if Michael has been trying to hinder Jessica from achieving her goal, which of the following statements is LEAST likely true?\nA) When giving information, Michael believed that there was a remote control inside the cabinet in the living room\nB) When giving information, Michael believed that there was a milk inside the cabinet in the living room\nC) When giving information, Michael believed that there was a book inside the cabinet in the living room",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4005_text_01",
+          "source": "text",
+          "content": "Jessica then moved to the living room and asked, \"Do you have any idea where the remote control might be?\" Michael, who had just walked into the kitchen, replied, \"I found the remote control inside the cabinet in the living room.\" Jessica walked to the cabinet, opened it, grabbed the remote control, and closed the cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.6629606485366821,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4005_text_05",
+          "source": "text",
+          "content": "Jessica and Michael completed their tasks without further communication.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5252556800842285,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4005_text_00",
+          "source": "text",
+          "content": "Jessica walked into the kitchen while Michael stayed silent.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5174117684364319,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4005_text_03",
+          "source": "text",
+          "content": "Meanwhile, Michael walked to the fridge, opened it, grabbed the milk, and closed the fridge.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.40435025095939636,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4005_text_04",
+          "source": "text",
+          "content": "He then opened the microwave and placed the milk inside before closing it.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.29870477318763733,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4005_visual_02",
+          "source": "visual",
+          "content": "a room with a couch, a table and a television",
+          "timestamp": 9.95,
+          "frame_path": "data/processed/frames/4005/frame_02.jpg",
+          "retrieval_score": 0.24892766773700714,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4005_2",
+      "episode_id": "4005",
+      "question_type": "belief",
+      "prediction": "B",
+      "used_evidence_ids": [],
+      "reasoning_summary": "The evidence shows that when Michael gave information about finding the remote control inside the cabinet in the living room, he did so after observing Jessica asking for help and opening the cabinet herself. This indicates that Michael based his belief on the observation of Jessica's actions, specifically the presence of milk inside the cabinet. Therefore, Michael's belief was more aligned with the actual contents of the cabinet (milk), making statement B the least likely to be true given the context provided.",
+      "parse_ok": true,
+      "raw_output": "ANSWER: B) When giving information, Michael believed that there was a milk inside the cabinet in the living room.\nEVIDENCE: [4005_text_01], [4005_text_05]\nREASONING: The evidence shows that when Michael gave information about finding the remote control inside the cabinet in the living room, he did so after observing Jessica asking for help and opening the cabinet herself. This indicates that Michael based his belief on the observation of Jessica's actions, specifically the presence of milk inside the cabinet. Therefore, Michael's belief was more aligned with the actual contents of the cabinet (milk), making statement B the least likely to be true given the context provided."
+    },
+    "verification": {
+      "sample_id": "4005_2",
+      "episode_id": "4005",
+      "prediction": "B",
+      "confidence": 0.7690680962244313,
+      "mapping_score": 0.8687157034873962,
+      "selected_support": 0.6238722801208496,
+      "alternative_support": 0.6572476625442505,
+      "support_margin": -0.03337538242340088,
+      "evidence_score": 0.5941081643104553,
+      "verification_status": "supported",
+      "abstained": false,
+      "used_evidence_ids": []
+    }
+  },
+  {
+    "sample_id": "4005_3",
+    "sample": {
+      "sample_id": "4005_3",
+      "episode_id": "4005",
+      "question_id": "3",
+      "context_text": "Jessica walked into the kitchen while Michael stayed silent. Jessica then moved to the living room and asked, \"Do you have any idea where the remote control might be?\" Michael, who had just walked into the kitchen, replied, \"I found the remote control inside the cabinet in the living room.\" Jessica walked to the cabinet, opened it, grabbed the remote control, and closed the cabinet. She then walked to the sofa and placed the remote control on it.\n\nMeanwhile, Michael walked to the fridge, opened it, grabbed the milk, and closed the fridge. He then opened the microwave and placed the milk inside before closing it.\n\nJessica and Michael completed their tasks without further communication.",
+      "question": "Given the above interaction, assuming that Michael knows what is inside the cabinet in the living room, which of the following statements is MOST likely true?\nA) When giving information, Michael has been trying to prevent Jessica from finding the remote control\nB) When giving information, Michael has been trying to help Jessica locate the remote control\nC) When giving information, Michael was indifferent towards Jessica's goals",
+      "question_type": "social_goal",
+      "choices": [
+        "A) When giving information, Michael has been trying to prevent Jessica from finding the remote control",
+        "B) When giving information, Michael has been trying to help Jessica locate the remote control",
+        "C) When giving information, Michael was indifferent towards Jessica's goals"
+      ],
+      "gold_answer": "B",
+      "gold_answer_text": "B) When giving information, Michael has been trying to help Jessica locate the remote control"
+    },
+    "retrieval": {
+      "sample_id": "4005_3",
+      "episode_id": "4005",
+      "question_type": "social_goal",
+      "question": "Given the above interaction, assuming that Michael knows what is inside the cabinet in the living room, which of the following statements is MOST likely true?\nA) When giving information, Michael has been trying to prevent Jessica from finding the remote control\nB) When giving information, Michael has been trying to help Jessica locate the remote control\nC) When giving information, Michael was indifferent towards Jessica's goals",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4005_text_01",
+          "source": "text",
+          "content": "Jessica then moved to the living room and asked, \"Do you have any idea where the remote control might be?\" Michael, who had just walked into the kitchen, replied, \"I found the remote control inside the cabinet in the living room.\" Jessica walked to the cabinet, opened it, grabbed the remote control, and closed the cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.657991886138916,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4005_text_00",
+          "source": "text",
+          "content": "Jessica walked into the kitchen while Michael stayed silent.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.4519190490245819,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4005_text_05",
+          "source": "text",
+          "content": "Jessica and Michael completed their tasks without further communication.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.44242537021636963,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4005_text_03",
+          "source": "text",
+          "content": "Meanwhile, Michael walked to the fridge, opened it, grabbed the milk, and closed the fridge.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3448610305786133,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4005_visual_02",
+          "source": "visual",
+          "content": "a room with a couch, a table and a television",
+          "timestamp": 9.95,
+          "frame_path": "data/processed/frames/4005/frame_02.jpg",
+          "retrieval_score": 0.3341606557369232,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4005_visual_04",
+          "source": "visual",
+          "content": "a room with a couch, a table and a television",
+          "timestamp": 19.9,
+          "frame_path": "data/processed/frames/4005/frame_04.jpg",
+          "retrieval_score": 0.3341606557369232,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4005_3",
+      "episode_id": "4005",
+      "question_type": "social_goal",
+      "prediction": "B",
+      "used_evidence_ids": [
+        "4005_text_01",
+        "4005_text_00",
+        "4005_text_05",
+        "4005_visual_02",
+        "4005_visual_04"
+      ],
+      "reasoning_summary": "The evidence shows that Jessica asked for help locating the remote control, and Michael provided this information by revealing its location in the cabinet. This action aligns most closely with Michael's intention to assist Jessica in finding the remote control.",
+      "parse_ok": true,
+      "raw_output": "ANSWER: Michael gave information to Jessica to help her find the remote control.\nEVIDENCE: 4005_text_01, 4005_text_00, 4005_text_05, 4005_visual_02, 4005_visual_04\nREASONING: The evidence shows that Jessica asked for help locating the remote control, and Michael provided this information by revealing its location in the cabinet. This action aligns most closely with Michael's intention to assist Jessica in finding the remote control."
+    },
+    "verification": {
+      "sample_id": "4005_3",
+      "episode_id": "4005",
+      "prediction": "B",
+      "confidence": 0.8510742723103756,
+      "mapping_score": 0.943825364112854,
+      "selected_support": 0.7209521532058716,
+      "alternative_support": 0.691268801689148,
+      "support_margin": 0.029683351516723633,
+      "evidence_score": 0.4441315233707428,
+      "verification_status": "supported",
+      "abstained": false,
+      "used_evidence_ids": [
+        "4005_text_01",
+        "4005_text_00",
+        "4005_text_05",
+        "4005_visual_02",
+        "4005_visual_04"
+      ]
+    }
+  },
+  {
+    "sample_id": "4005_4",
+    "sample": {
+      "sample_id": "4005_4",
+      "episode_id": "4005",
+      "question_id": "4",
+      "context_text": "Jessica walked into the kitchen while Michael stayed silent. Jessica then moved to the living room and asked, \"Do you have any idea where the remote control might be?\" Michael, who had just walked into the kitchen, replied, \"I found the remote control inside the cabinet in the living room.\" Jessica walked to the cabinet, opened it, grabbed the remote control, and closed the cabinet. She then walked to the sofa and placed the remote control on it.\n\nMeanwhile, Michael walked to the fridge, opened it, grabbed the milk, and closed the fridge. He then opened the microwave and placed the milk inside before closing it.\n\nJessica and Michael completed their tasks without further communication.",
+      "question": "Given the above interaction, assuming that Michael knows what is inside the cabinet in the living room, which of the following statements is LEAST likely true?\nA) When giving information, Michael was indifferent towards Jessica's goals\nB) When giving information, Michael has been trying to help Jessica locate the remote control\nC) When giving information, Michael has been trying to prevent Jessica from finding the remote control",
+      "question_type": "social_goal",
+      "choices": [
+        "A) When giving information, Michael was indifferent towards Jessica's goals",
+        "B) When giving information, Michael has been trying to help Jessica locate the remote control",
+        "C) When giving information, Michael has been trying to prevent Jessica from finding the remote control"
+      ],
+      "gold_answer": "C",
+      "gold_answer_text": "C) When giving information, Michael has been trying to prevent Jessica from finding the remote control"
+    },
+    "retrieval": {
+      "sample_id": "4005_4",
+      "episode_id": "4005",
+      "question_type": "social_goal",
+      "question": "Given the above interaction, assuming that Michael knows what is inside the cabinet in the living room, which of the following statements is LEAST likely true?\nA) When giving information, Michael was indifferent towards Jessica's goals\nB) When giving information, Michael has been trying to help Jessica locate the remote control\nC) When giving information, Michael has been trying to prevent Jessica from finding the remote control",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4005_text_01",
+          "source": "text",
+          "content": "Jessica then moved to the living room and asked, \"Do you have any idea where the remote control might be?\" Michael, who had just walked into the kitchen, replied, \"I found the remote control inside the cabinet in the living room.\" Jessica walked to the cabinet, opened it, grabbed the remote control, and closed the cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.6448788642883301,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4005_text_05",
+          "source": "text",
+          "content": "Jessica and Michael completed their tasks without further communication.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.4831138551235199,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4005_text_00",
+          "source": "text",
+          "content": "Jessica walked into the kitchen while Michael stayed silent.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.46010905504226685,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4005_text_03",
+          "source": "text",
+          "content": "Meanwhile, Michael walked to the fridge, opened it, grabbed the milk, and closed the fridge.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3305038809776306,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4005_visual_02",
+          "source": "visual",
+          "content": "a room with a couch, a table and a television",
+          "timestamp": 9.95,
+          "frame_path": "data/processed/frames/4005/frame_02.jpg",
+          "retrieval_score": 0.31789910793304443,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4005_visual_04",
+          "source": "visual",
+          "content": "a room with a couch, a table and a television",
+          "timestamp": 19.9,
+          "frame_path": "data/processed/frames/4005/frame_04.jpg",
+          "retrieval_score": 0.31789910793304443,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4005_4",
+      "episode_id": "4005",
+      "question_type": "social_goal",
+      "prediction": "C",
+      "used_evidence_ids": [
+        "4005_text_01",
+        "4005_text_05",
+        "4005_visual_02",
+        "4005_visual_04"
+      ],
+      "reasoning_summary": "The evidence shows that Michael provided information about the location of the remote control when Jessica asked for its whereabouts. This action aligns most closely with helping Jessica find the remote control by providing relevant information. Therefore, it is least likely that Michael was indifferent towards Jessica's goals during this interaction.",
+      "parse_ok": true,
+      "raw_output": "ANSWER: Option A\nEVIDENCE: 4005_text_01, 4005_text_05, 4005_visual_02, 4005_visual_04\nREASONING: The evidence shows that Michael provided information about the location of the remote control when Jessica asked for its whereabouts. This action aligns most closely with helping Jessica find the remote control by providing relevant information. Therefore, it is least likely that Michael was indifferent towards Jessica's goals during this interaction."
+    },
+    "verification": {
+      "sample_id": "4005_4",
+      "episode_id": "4005",
+      "prediction": "C",
+      "confidence": 0.6946983647439483,
+      "mapping_score": 0.14009195566177368,
+      "selected_support": 0.691268801689148,
+      "alternative_support": 0.7209521532058716,
+      "support_margin": -0.029683351516723633,
+      "evidence_score": 0.4409477338194847,
+      "verification_status": "uncertain",
+      "abstained": true,
+      "used_evidence_ids": [
+        "4005_text_01",
+        "4005_text_05",
+        "4005_visual_02",
+        "4005_visual_04"
+      ]
+    }
+  },
+  {
+    "sample_id": "4009_1",
+    "sample": {
+      "sample_id": "4009_1",
+      "episode_id": "4009",
+      "question_id": "1",
+      "context_text": "Mary walked into the kitchen and then headed to the bathroom. Meanwhile, John entered the kitchen. Mary returned to the kitchen and walked towards a kitchen cabinet. John moved to another kitchen cabinet, opened it, and grabbed a potato. Mary then walked to the fridge and asked, \"Any idea where the wine might be?\" John replied, \"I found the wine inside the kitchen cabinet,\" as he closed the kitchen cabinet.\n\nMary opened the fridge, grabbed the wine, and closed the fridge. John continued his task by putting the potato inside the kitchen cabinet.",
+      "question": "Given the above interaction, if John has been trying to help Mary achieve her goal, which of the following statements is MOST likely true?\nA) When giving information, John believed that there was a tomato inside the kitchen cabinet\nB) When giving information, John believed that there was wine inside the kitchen cabinet\nC) When giving information, John believed that there was a potato inside the kitchen cabinet",
+      "question_type": "belief",
+      "choices": [
+        "A) When giving information, John believed that there was a tomato inside the kitchen cabinet",
+        "B) When giving information, John believed that there was wine inside the kitchen cabinet",
+        "C) When giving information, John believed that there was a potato inside the kitchen cabinet"
+      ],
+      "gold_answer": "B",
+      "gold_answer_text": "B) When giving information, John believed that there was wine inside the kitchen cabinet"
+    },
+    "retrieval": {
+      "sample_id": "4009_1",
+      "episode_id": "4009",
+      "question_type": "belief",
+      "question": "Given the above interaction, if John has been trying to help Mary achieve her goal, which of the following statements is MOST likely true?\nA) When giving information, John believed that there was a tomato inside the kitchen cabinet\nB) When giving information, John believed that there was wine inside the kitchen cabinet\nC) When giving information, John believed that there was a potato inside the kitchen cabinet",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4009_text_04",
+          "source": "text",
+          "content": "Mary then walked to the fridge and asked, \"Any idea where the wine might be?\" John replied, \"I found the wine inside the kitchen cabinet,\" as he closed the kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5851995944976807,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4009_visual_01",
+          "source": "visual",
+          "content": "mary, i were the night? john, i spotted a wine kitchen",
+          "timestamp": 5.1,
+          "frame_path": "data/processed/frames/4009/frame_01.jpg",
+          "retrieval_score": 0.5009573698043823,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4009_text_06",
+          "source": "text",
+          "content": "John continued his task by putting the potato inside the kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.44711217284202576,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4009_text_01",
+          "source": "text",
+          "content": "Meanwhile, John entered the kitchen.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.4343571066856384,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4009_text_03",
+          "source": "text",
+          "content": "John moved to another kitchen cabinet, opened it, and grabbed a potato.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.429762601852417,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4009_text_05",
+          "source": "text",
+          "content": "Mary opened the fridge, grabbed the wine, and closed the fridge.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3579932749271393,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4009_1",
+      "episode_id": "4009",
+      "question_type": "belief",
+      "prediction": "C",
+      "used_evidence_ids": [
+        "4009_text_01",
+        "4009_text_03",
+        "4009_text_05"
+      ],
+      "reasoning_summary": "The evidence shows that John moved to another kitchen cabinet, opened it, and grabbed a potato after noticing Mary asking about the wine. This indicates that John had observed a potato inside the cabinet and inferred that Mary would ask about it, leading him to give her the information about finding the wine inside the cabinet. Therefore, John's belief was based on observing a potato being present in the cabinet.",
+      "parse_ok": true,
+      "raw_output": "ANSWER: John believed that there was a potato inside the kitchen cabinet when he gave Mary information about finding the wine inside the cabinet.\nEVIDENCE: 4009_text_01, 4009_text_03, 4009_text_05\nREASONING: The evidence shows that John moved to another kitchen cabinet, opened it, and grabbed a potato after noticing Mary asking about the wine. This indicates that John had observed a potato inside the cabinet and inferred that Mary would ask about it, leading him to give her the information about finding the wine inside the cabinet. Therefore, John's belief was based on observing a potato being present in the cabinet."
+    },
+    "verification": {
+      "sample_id": "4009_1",
+      "episode_id": "4009",
+      "prediction": "C",
+      "confidence": 0.8653970302508479,
+      "mapping_score": 0.8390756845474243,
+      "selected_support": 0.8119125962257385,
+      "alternative_support": 0.6648023128509521,
+      "support_margin": 0.14711028337478638,
+      "evidence_score": 0.40737099448839825,
+      "verification_status": "supported",
+      "abstained": false,
+      "used_evidence_ids": [
+        "4009_text_01",
+        "4009_text_03",
+        "4009_text_05"
+      ]
+    }
+  },
+  {
+    "sample_id": "4009_2",
+    "sample": {
+      "sample_id": "4009_2",
+      "episode_id": "4009",
+      "question_id": "2",
+      "context_text": "Mary walked into the kitchen and then headed to the bathroom. Meanwhile, John entered the kitchen. Mary returned to the kitchen and walked towards a kitchen cabinet. John moved to another kitchen cabinet, opened it, and grabbed a potato. Mary then walked to the fridge and asked, \"Any idea where the wine might be?\" John replied, \"I found the wine inside the kitchen cabinet,\" as he closed the kitchen cabinet.\n\nMary opened the fridge, grabbed the wine, and closed the fridge. John continued his task by putting the potato inside the kitchen cabinet.",
+      "question": "Given the above interaction, if John has been trying to hinder Mary from achieving her goal, which of the following statements is LEAST likely true?\nA) When giving information, John believed that there was wine inside the kitchen cabinet\nB) When giving information, John believed that there was a tomato inside the kitchen cabinet\nC) When giving information, John believed that there was a potato inside the kitchen cabinet",
+      "question_type": "belief",
+      "choices": [
+        "A) When giving information, John believed that there was wine inside the kitchen cabinet",
+        "B) When giving information, John believed that there was a tomato inside the kitchen cabinet",
+        "C) When giving information, John believed that there was a potato inside the kitchen cabinet"
+      ],
+      "gold_answer": "A",
+      "gold_answer_text": "A) When giving information, John believed that there was wine inside the kitchen cabinet"
+    },
+    "retrieval": {
+      "sample_id": "4009_2",
+      "episode_id": "4009",
+      "question_type": "belief",
+      "question": "Given the above interaction, if John has been trying to hinder Mary from achieving her goal, which of the following statements is LEAST likely true?\nA) When giving information, John believed that there was wine inside the kitchen cabinet\nB) When giving information, John believed that there was a tomato inside the kitchen cabinet\nC) When giving information, John believed that there was a potato inside the kitchen cabinet",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4009_text_04",
+          "source": "text",
+          "content": "Mary then walked to the fridge and asked, \"Any idea where the wine might be?\" John replied, \"I found the wine inside the kitchen cabinet,\" as he closed the kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5580182075500488,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4009_visual_01",
+          "source": "visual",
+          "content": "mary, i were the night? john, i spotted a wine kitchen",
+          "timestamp": 5.1,
+          "frame_path": "data/processed/frames/4009/frame_01.jpg",
+          "retrieval_score": 0.48457083106040955,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4009_text_06",
+          "source": "text",
+          "content": "John continued his task by putting the potato inside the kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.4140658378601074,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4009_text_01",
+          "source": "text",
+          "content": "Meanwhile, John entered the kitchen.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.40117818117141724,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4009_text_03",
+          "source": "text",
+          "content": "John moved to another kitchen cabinet, opened it, and grabbed a potato.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.39641958475112915,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4009_text_05",
+          "source": "text",
+          "content": "Mary opened the fridge, grabbed the wine, and closed the fridge.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3165948987007141,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4009_2",
+      "episode_id": "4009",
+      "question_type": "belief",
+      "prediction": "B",
+      "used_evidence_ids": [],
+      "reasoning_summary": "The evidence shows that when John gave Mary information about the wine being inside the kitchen cabinet, he did so based on his observation of finding the wine there. There is no mention of him believing there was a tomato inside the cabinet. Therefore, statement B is least likely to be true given the provided evidence.",
+      "parse_ok": true,
+      "raw_output": "ANSWER: B) When giving information, John believed that there was a tomato inside the kitchen cabinet\nEVIDENCE: [4009_text_04], [4009_text_06]\nREASONING: The evidence shows that when John gave Mary information about the wine being inside the kitchen cabinet, he did so based on his observation of finding the wine there. There is no mention of him believing there was a tomato inside the cabinet. Therefore, statement B is least likely to be true given the provided evidence."
+    },
+    "verification": {
+      "sample_id": "4009_2",
+      "episode_id": "4009",
+      "prediction": "B",
+      "confidence": 0.7492561872174793,
+      "mapping_score": 0.9056742191314697,
+      "selected_support": 0.637008547782898,
+      "alternative_support": 0.8119125962257385,
+      "support_margin": -0.17490404844284058,
+      "evidence_score": 0.5212945193052292,
+      "verification_status": "conflicted",
+      "abstained": true,
+      "used_evidence_ids": []
+    }
+  },
+  {
+    "sample_id": "4009_3",
+    "sample": {
+      "sample_id": "4009_3",
+      "episode_id": "4009",
+      "question_id": "3",
+      "context_text": "Mary walked into the kitchen and then headed to the bathroom. Meanwhile, John entered the kitchen. Mary returned to the kitchen and walked towards a kitchen cabinet. John moved to another kitchen cabinet, opened it, and grabbed a potato. Mary then walked to the fridge and asked, \"Any idea where the wine might be?\" John replied, \"I found the wine inside the kitchen cabinet,\" as he closed the kitchen cabinet.\n\nMary opened the fridge, grabbed the wine, and closed the fridge. John continued his task by putting the potato inside the kitchen cabinet.",
+      "question": "Given the above interaction, assuming that John knows what is inside the kitchen cabinet, which of the following statements is MOST likely true?\nA) When giving information, John has been trying to help Mary locate the wine\nB) When giving information, John has been trying to prevent Mary from finding the wine\nC) When giving information, John was indifferent towards Mary's goals",
+      "question_type": "social_goal",
+      "choices": [
+        "A) When giving information, John has been trying to help Mary locate the wine",
+        "B) When giving information, John has been trying to prevent Mary from finding the wine",
+        "C) When giving information, John was indifferent towards Mary's goals"
+      ],
+      "gold_answer": "B",
+      "gold_answer_text": "B) When giving information, John has been trying to prevent Mary from finding the wine"
+    },
+    "retrieval": {
+      "sample_id": "4009_3",
+      "episode_id": "4009",
+      "question_type": "social_goal",
+      "question": "Given the above interaction, assuming that John knows what is inside the kitchen cabinet, which of the following statements is MOST likely true?\nA) When giving information, John has been trying to help Mary locate the wine\nB) When giving information, John has been trying to prevent Mary from finding the wine\nC) When giving information, John was indifferent towards Mary's goals",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4009_text_04",
+          "source": "text",
+          "content": "Mary then walked to the fridge and asked, \"Any idea where the wine might be?\" John replied, \"I found the wine inside the kitchen cabinet,\" as he closed the kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5738406181335449,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4009_text_01",
+          "source": "text",
+          "content": "Meanwhile, John entered the kitchen.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.46283578872680664,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4009_visual_01",
+          "source": "visual",
+          "content": "mary, i were the night? john, i spotted a wine kitchen",
+          "timestamp": 5.1,
+          "frame_path": "data/processed/frames/4009/frame_01.jpg",
+          "retrieval_score": 0.45443063974380493,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4009_text_06",
+          "source": "text",
+          "content": "John continued his task by putting the potato inside the kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.42576920986175537,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4009_text_03",
+          "source": "text",
+          "content": "John moved to another kitchen cabinet, opened it, and grabbed a potato.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.41156184673309326,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4009_text_02",
+          "source": "text",
+          "content": "Mary returned to the kitchen and walked towards a kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3948584496974945,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4009_3",
+      "episode_id": "4009",
+      "question_type": "social_goal",
+      "prediction": "A",
+      "used_evidence_ids": [],
+      "reasoning_summary": "The evidence shows that when Mary asked for help with locating the wine, John responded by revealing that he had found the wine inside the kitchen cabinet. This indicates that John was actively trying to assist Mary in her quest to find the wine.",
+      "parse_ok": true,
+      "raw_output": "ANSWER: John was trying to help Mary locate the wine.\nEVIDENCE: [4009_text_04], [4009_text_02]\nREASONING: The evidence shows that when Mary asked for help with locating the wine, John responded by revealing that he had found the wine inside the kitchen cabinet. This indicates that John was actively trying to assist Mary in her quest to find the wine."
+    },
+    "verification": {
+      "sample_id": "4009_3",
+      "episode_id": "4009",
+      "prediction": "A",
+      "confidence": 0.7898305047198919,
+      "mapping_score": 0.9243444204330444,
+      "selected_support": 0.6751805543899536,
+      "alternative_support": 0.6705070734024048,
+      "support_margin": 0.004673480987548828,
+      "evidence_score": 0.5183382034301758,
+      "verification_status": "supported",
+      "abstained": false,
+      "used_evidence_ids": []
+    }
+  },
+  {
+    "sample_id": "4009_4",
+    "sample": {
+      "sample_id": "4009_4",
+      "episode_id": "4009",
+      "question_id": "4",
+      "context_text": "Mary walked into the kitchen and then headed to the bathroom. Meanwhile, John entered the kitchen. Mary returned to the kitchen and walked towards a kitchen cabinet. John moved to another kitchen cabinet, opened it, and grabbed a potato. Mary then walked to the fridge and asked, \"Any idea where the wine might be?\" John replied, \"I found the wine inside the kitchen cabinet,\" as he closed the kitchen cabinet.\n\nMary opened the fridge, grabbed the wine, and closed the fridge. John continued his task by putting the potato inside the kitchen cabinet.",
+      "question": "Given the above interaction, assuming that John knows what is inside the kitchen cabinet, which of the following statements is LEAST likely true?\nA) When giving information, John has been trying to help Mary locate the wine\nB) When giving information, John has been trying to prevent Mary from finding the wine\nC) When giving information, John was indifferent towards Mary's goals",
+      "question_type": "social_goal",
+      "choices": [
+        "A) When giving information, John has been trying to help Mary locate the wine",
+        "B) When giving information, John has been trying to prevent Mary from finding the wine",
+        "C) When giving information, John was indifferent towards Mary's goals"
+      ],
+      "gold_answer": "A",
+      "gold_answer_text": "A) When giving information, John has been trying to help Mary locate the wine"
+    },
+    "retrieval": {
+      "sample_id": "4009_4",
+      "episode_id": "4009",
+      "question_type": "social_goal",
+      "question": "Given the above interaction, assuming that John knows what is inside the kitchen cabinet, which of the following statements is LEAST likely true?\nA) When giving information, John has been trying to help Mary locate the wine\nB) When giving information, John has been trying to prevent Mary from finding the wine\nC) When giving information, John was indifferent towards Mary's goals",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4009_text_04",
+          "source": "text",
+          "content": "Mary then walked to the fridge and asked, \"Any idea where the wine might be?\" John replied, \"I found the wine inside the kitchen cabinet,\" as he closed the kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5631300806999207,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4009_text_01",
+          "source": "text",
+          "content": "Meanwhile, John entered the kitchen.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.4431264102458954,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4009_visual_01",
+          "source": "visual",
+          "content": "mary, i were the night? john, i spotted a wine kitchen",
+          "timestamp": 5.1,
+          "frame_path": "data/processed/frames/4009/frame_01.jpg",
+          "retrieval_score": 0.442892849445343,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4009_text_06",
+          "source": "text",
+          "content": "John continued his task by putting the potato inside the kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.4054974913597107,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4009_text_03",
+          "source": "text",
+          "content": "John moved to another kitchen cabinet, opened it, and grabbed a potato.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3888639211654663,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4009_text_02",
+          "source": "text",
+          "content": "Mary returned to the kitchen and walked towards a kitchen cabinet.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3703659474849701,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4009_4",
+      "episode_id": "4009",
+      "question_type": "social_goal",
+      "prediction": "C",
+      "used_evidence_ids": [],
+      "reasoning_summary": "The evidence shows that when John gave Mary information about the location of the wine, he did so without any apparent concern for her goal of locating the wine herself. Instead, his",
+      "parse_ok": true,
+      "raw_output": "ANSWER: C) When giving information, John was indifferent towards Mary's goals\nEVIDENCE: [4009_text_04], [4009_text_06]\nREASONING: The evidence shows that when John gave Mary information about the location of the wine, he did so without any apparent concern for her goal of locating the wine herself. Instead, his"
+    },
+    "verification": {
+      "sample_id": "4009_4",
+      "episode_id": "4009",
+      "prediction": "C",
+      "confidence": 0.7187499489392524,
+      "mapping_score": 0.8920110464096069,
+      "selected_support": 0.47811153531074524,
+      "alternative_support": 0.6751805543899536,
+      "support_margin": -0.19706901907920837,
+      "evidence_score": 0.503128245472908,
+      "verification_status": "conflicted",
+      "abstained": true,
+      "used_evidence_ids": []
+    }
+  },
+  {
+    "sample_id": "4017_1",
+    "sample": {
+      "sample_id": "4017_1",
+      "episode_id": "4017",
+      "question_id": "1",
+      "context_text": "Michael walked to the microwave and opened the fridge. Meanwhile, Sarah walked into the living room. Michael closed the fridge and asked, \"Do you know where the toy is?\" as he walked back to the microwave. Sarah responded, \"I found a toy inside the microwave in the kitchen,\" while grabbing a magazine. Michael opened and closed the microwave, then walked to the living room and grabbed the toy. Sarah walked to the kitchen, then to the bedroom, and placed the magazine on the coffee table.",
+      "question": "Given the above interaction, if Sarah has been trying to help Michael achieve his goal, which of the following statements is MOST likely?\nA) When giving information, Sarah believed that there was a magazine inside the microwave\nB) When giving information, Sarah believed that there was a toy inside the microwave\nC) When giving information, Sarah believed that there was a book inside the microwave",
+      "question_type": "belief",
+      "choices": [
+        "A) When giving information, Sarah believed that there was a magazine inside the microwave",
+        "B) When giving information, Sarah believed that there was a toy inside the microwave",
+        "C) When giving information, Sarah believed that there was a book inside the microwave"
+      ],
+      "gold_answer": "B",
+      "gold_answer_text": "B) When giving information, Sarah believed that there was a toy inside the microwave"
+    },
+    "retrieval": {
+      "sample_id": "4017_1",
+      "episode_id": "4017",
+      "question_type": "belief",
+      "question": "Given the above interaction, if Sarah has been trying to help Michael achieve his goal, which of the following statements is MOST likely?\nA) When giving information, Sarah believed that there was a magazine inside the microwave\nB) When giving information, Sarah believed that there was a toy inside the microwave\nC) When giving information, Sarah believed that there was a book inside the microwave",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4017_text_03",
+          "source": "text",
+          "content": "Sarah responded, \"I found a toy inside the microwave in the kitchen,\" while grabbing a magazine.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5871257781982422,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4017_text_02",
+          "source": "text",
+          "content": "Michael closed the fridge and asked, \"Do you know where the toy is?\" as he walked back to the microwave.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.562120258808136,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4017_text_04",
+          "source": "text",
+          "content": "Michael opened and closed the microwave, then walked to the living room and grabbed the toy.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5012442469596863,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4017_text_00",
+          "source": "text",
+          "content": "Michael walked to the microwave and opened the fridge.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.47619375586509705,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4017_text_05",
+          "source": "text",
+          "content": "Sarah walked to the kitchen, then to the bedroom, and placed the magazine on the coffee table.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.38674458861351013,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4017_visual_06",
+          "source": "visual",
+          "content": "a room with a couch, a table and a television",
+          "timestamp": 35.7,
+          "frame_path": "data/processed/frames/4017/frame_06.jpg",
+          "retrieval_score": 0.24150319397449493,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4017_1",
+      "episode_id": "4017",
+      "question_type": "belief",
+      "prediction": "B",
+      "used_evidence_ids": [],
+      "reasoning_summary": "The evidence shows that Sarah mentioned finding a toy inside the microwave during her response to Michael's question. This indicates that Sarah had a",
+      "parse_ok": true,
+      "raw_output": "ANSWER: Sarah believed that there was a toy inside the microwave when she gave Michael information about finding a toy inside the microwave.\nEVIDENCE: [4017_text_03], [4017_text_02]\nREASONING: The evidence shows that Sarah mentioned finding a toy inside the microwave during her response to Michael's question. This indicates that Sarah had a"
+    },
+    "verification": {
+      "sample_id": "4017_1",
+      "episode_id": "4017",
+      "prediction": "B",
+      "confidence": 0.8130195792489828,
+      "mapping_score": 0.8861403465270996,
+      "selected_support": 0.809752881526947,
+      "alternative_support": 0.7682664394378662,
+      "support_margin": 0.04148644208908081,
+      "evidence_score": 0.5746230185031891,
+      "verification_status": "supported",
+      "abstained": false,
+      "used_evidence_ids": []
+    }
+  },
+  {
+    "sample_id": "4017_2",
+    "sample": {
+      "sample_id": "4017_2",
+      "episode_id": "4017",
+      "question_id": "2",
+      "context_text": "Michael walked to the microwave and opened the fridge. Meanwhile, Sarah walked into the living room. Michael closed the fridge and asked, \"Do you know where the toy is?\" as he walked back to the microwave. Sarah responded, \"I found a toy inside the microwave in the kitchen,\" while grabbing a magazine. Michael opened and closed the microwave, then walked to the living room and grabbed the toy. Sarah walked to the kitchen, then to the bedroom, and placed the magazine on the coffee table.",
+      "question": "Given the above interaction, if Sarah has been trying to hinder Michael from achieving his goal, which of the following statements is LEAST likely?\nA) When giving information, Sarah believed that there was a toy inside the microwave\nB) When giving information, Sarah believed that there was a book inside the microwave\nC) When giving information, Sarah believed that there was a magazine inside the microwave",
+      "question_type": "belief",
+      "choices": [
+        "A) When giving information, Sarah believed that there was a toy inside the microwave",
+        "B) When giving information, Sarah believed that there was a book inside the microwave",
+        "C) When giving information, Sarah believed that there was a magazine inside the microwave"
+      ],
+      "gold_answer": "A",
+      "gold_answer_text": "A) When giving information, Sarah believed that there was a toy inside the microwave"
+    },
+    "retrieval": {
+      "sample_id": "4017_2",
+      "episode_id": "4017",
+      "question_type": "belief",
+      "question": "Given the above interaction, if Sarah has been trying to hinder Michael from achieving his goal, which of the following statements is LEAST likely?\nA) When giving information, Sarah believed that there was a toy inside the microwave\nB) When giving information, Sarah believed that there was a book inside the microwave\nC) When giving information, Sarah believed that there was a magazine inside the microwave",
+      "top_k": 6,
+      "modality_balanced": true,
+      "evidence": [
+        {
+          "evidence_id": "4017_text_03",
+          "source": "text",
+          "content": "Sarah responded, \"I found a toy inside the microwave in the kitchen,\" while grabbing a magazine.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.5442184209823608,
+          "rank": 1
+        },
+        {
+          "evidence_id": "4017_text_02",
+          "source": "text",
+          "content": "Michael closed the fridge and asked, \"Do you know where the toy is?\" as he walked back to the microwave.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.525344729423523,
+          "rank": 2
+        },
+        {
+          "evidence_id": "4017_text_04",
+          "source": "text",
+          "content": "Michael opened and closed the microwave, then walked to the living room and grabbed the toy.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.45804882049560547,
+          "rank": 3
+        },
+        {
+          "evidence_id": "4017_text_00",
+          "source": "text",
+          "content": "Michael walked to the microwave and opened the fridge.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.43375444412231445,
+          "rank": 4
+        },
+        {
+          "evidence_id": "4017_text_05",
+          "source": "text",
+          "content": "Sarah walked to the kitchen, then to the bedroom, and placed the magazine on the coffee table.",
+          "timestamp": null,
+          "frame_path": null,
+          "retrieval_score": 0.3328753113746643,
+          "rank": 5
+        },
+        {
+          "evidence_id": "4017_visual_06",
+          "source": "visual",
+          "content": "a room with a couch, a table and a television",
+          "timestamp": 35.7,
+          "frame_path": "data/processed/frames/4017/frame_06.jpg",
+          "retrieval_score": 0.21231620013713837,
+          "rank": 6
+        }
+      ]
+    },
+    "reasoning": {
+      "sample_id": "4017_2",
+      "episode_id": "4017",
+      "question_type": "belief",
+      "prediction": "B",
+      "used_evidence_ids": [],
+      "reasoning_summary": "The evidence shows that when Sarah gave information about finding a toy inside the microwave, she did so after Michael had already closed the fridge and asked about the toy.",
+      "parse_ok": true,
+      "raw_output": "ANSWER: B) When giving information, Sarah believed that there was a book inside the microwave\nEVIDENCE: [4017_text_03], [4017_text_02]\nREASONING: The evidence shows that when Sarah gave information about finding a toy inside the microwave, she did so after Michael had already closed the fridge and asked about the toy."
+    },
+    "verification": {
+      "sample_id": "4017_2",
+      "episode_id": "4017",
+      "prediction": "B",
+      "confidence": 0.7703417281763845,
+      "mapping_score": 0.8896388411521912,
+      "selected_support": 0.7092066407203674,
+      "alternative_support": 0.809752881526947,
+      "support_margin": -0.10054624080657959,
+      "evidence_score": 0.5347815752029419,
+      "verification_status": "conflicted",
+      "abstained": true,
+      "used_evidence_ids": []
+    }
+  }
+]
