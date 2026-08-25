@@ -1,1 +1,1 @@
-# No additional dependencies required.
+huggingface_hub==0.36.2
